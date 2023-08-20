@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site add pluging</title>
+    <link rel="stylesheet" href="./../bootstrap/css/bootstrap.min.css">
+<style>
+ .box{
+        height:50px;
+        width: 50px;
+        background-color: green;
+        margin: 10px;
+        border: 2px solid black;
+
+    }
+    .box1{
+        height:50px;
+        width: 50px;
+        background-color: red;
+        margin: 10px;
+        border: 2px dashed black;
+
+    }
+    button{
+        margin: 20px;
+
+    }
+    #p1{
+        border: 2px solid grey;
+        height: 600px;
+        margin: 3px;
+    }
+    #p2{
+        border: 2px solid red;
+        height: 600px;
+        margin: 3px;
+    }
+
+</style>
+   
+</head>
+<body>
+    
+    <div class="container">
+        <div>
+            <button id="bt" type="button" class="btn btn-success">Add Site</button>
+        </div>
+        <div class="row mt-5">
+           <div class="col-8" id="p1">
+                 <div id="rw" class="row" ></div>
+           </div>
+
+           <div class="col-3" id="p2">
+                 <div id="w" class="row"></div>
+
+           </div>
+        </div>
+    </div>
+
+    <script src="./jquery-3.7.0.js"></script>
+    <script>
+
+$(document).ready(function(){
+
+    $("#bt").on("click", function(){
+        let rw = $("#rw");
+   
+    $("#rw").append('<div class="box"></div>');
+       
+
+    });
+
+    $("#bt").on("click", function(){
+        let rw = $("#w");
+   
+    $("#w").append('<div class="box1"></div>');
+       
+
+    });
+
+});
+
+    </script>
+</body>
+</html>

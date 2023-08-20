@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery_ligthMode_darkMode</title>
+
+    <style>
+
+        body{         
+        text-align:center; 
+        background-color: white;
+        color: black;
+        } 
+        h1{ 
+        color: lightpink; 
+        margin-top: 50px;
+        } 
+        .mode { 
+            float:right; 
+            margin-top: 20px;
+            margin-right: 20px;
+        } 
+        .change { 
+            cursor: pointer; 
+            border: 1px solid #555; 
+            border-radius: 10%; 
+            width: 20px; 
+            text-align: center; 
+            padding: 8px; 
+            margin-left: 8px; 
+        } 
+        .dark-mode{ 
+            background-color: #222; 
+            color: #e6e6e6; 
+        }
+     
+         
+    </style>
+</head>
+<body>
+    
+    <div class="mode"> 
+        <b>Select Mode:</b><span class="change">OFF / NO</span> 
+    </div>
+        
+        <h1> Hello World</h1>
+  
+
+
+    <script src="./jquery-3.7.0.js"></script>
+    <script>
+
+ $(document).ready(function(){
+
+        // $( ".change" ).on("click", function() { 
+        //     if( $( "body" ).hasClass( "dark" )) { 
+        //         $( "body" ).removeClass( "dark" ); 
+        //         $( ".change" ).text( "OFF" ); 
+        //     } 
+        //     else { 
+        //         $( "body" ).addClass( "dark" ); 
+        //         $( ".change" ).text( "ON" ); 
+        //     } 
+        // }); 
+
+       
+  $(".change").click(function() {
+    $("body").toggleClass("dark-mode");
+
+  });
+
+  });
+        
+
+
+
+    </script>
+</body>
+</html>

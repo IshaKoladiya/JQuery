@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery_Css</title>
+
+
+        <style>
+        .box{
+        background-color: blue;
+        color: white;
+        width: 200px;
+        height: 200px;
+        padding: 50px;
+        margin: 20px;
+        font-size: 30px;
+        }
+
+        .card{
+            box-shadow: 20px 20px 20px grey;
+            border: 10px solid black;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        .mypadding{
+            padding: 100px;
+
+        }
+ 
+        </style>
+
+    </head>
+    <body>
+
+        <button id="getcss">Get Css</button>
+        <button id="setcss">Set Css</button>
+
+
+        <hr/>
+        <button id="aclass">Add class</button>
+        <button id="rclass">removeclass</button>
+        <button id="tclass">toggleclass</button>
+
+
+
+        <div>hello world</div>
+
+
+
+        <script src="./jquery-3.7.0.js"></script>
+
+        <script>
+
+    $(document).ready(function (){
+
+        // get css
+
+        // $("#getcss").click(function(){
+        //     // let value = $(".box").css("background-color");
+        //     let value = $(".box").css("width");
+
+        //     alert(value);
+
+        // });
+
+        // set css
+
+        // $("#setcss").click(function(){
+        //     // let value = $(".box").css("background-color","red");
+        //     // let value = $(".box").css("width","500px");
+
+        // });
+
+        // multiple css using method chaining
+
+        // $("#setcss").click(function(){
+        //     let value = $(".box").css("background-color","red").css("width","500px");
+
+        // });
+
+        // multiple css using object
+
+        // $("#setcss").click(function(){
+        //     $(".box").css({
+        //         "background-color":"green",
+        //         "color":"red",
+        //         "padding":"50px",
+        //         "border":"5px solid black"
+        //     }); 
+        // });
+
+                                                               // 2. addclass
+
+        // * single class
+
+        // $("#aclass").click(function (){
+        //     $("div").addClass("box")
+        // });
+        // });
+
+        // * multiple class
+
+        // $("#aclass").click(function (){
+        //      $("div").addClass("box card mypadding")
+        // });
+        
+
+        
+                                                               // 3. removeclass
+
+        // * single class
+
+        // $("#rclass").click(function (){
+        //     $("div").removeClass("box")
+        // });
+        
+
+        // * multiple class
+
+        // $("#rclass").click(function (){
+        //      $("div").removeClass("box card mypadding")
+        // });
+
+
+        
+                                                               // 4. toggleclass
+
+        // * single class
+
+        // $("#tclass").click(function (){
+        //     $("div").toggleClass("box")
+        // });
+        
+
+        // * multiple class
+
+        $("#tclass").click(function (){
+             $("div").toggleClass("box card mypadding")
+        });
+
+
+
+
+
+
+
+
+
+     });
+
+
+
+
+
+
+
+
+
+    </script>
+
+    </body>
+</html>

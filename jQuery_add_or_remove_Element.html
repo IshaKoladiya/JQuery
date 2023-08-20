@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery_add_or_remove_Element</title>
+</head>
+<body>
+    
+<button id="append">Append</button>
+<button id="prepend">prepend</button>
+<button id="after">after</button>
+<button id="before">before</button>
+
+<button id="remove">remove</button>
+<button id="empty">empty</button>
+
+
+
+
+
+
+<div class="demo">
+    Isha Koladiya
+</div>
+<div>Lorem ipsum dolor sit amet.</div>
+<div>Lorem ipsum dolor sit amet.</div>
+<div>Lorem ipsum dolor sit amet.</div>
+<input type="text" id="data">
+<ol>
+    <li>html</li>
+    <li>css</li>
+    <li>bt</li>
+    <li>js</li>
+</ol>
+
+<script src="./jquery-3.7.0.js"></script>
+<script>
+
+                                                   // ==> append
+
+// 1. text
+// $("#append").click(function(){
+// $(".demo").append(" future begining here...")
+
+// });
+
+// 2.html
+// $("#append").click(function(){
+// $(".demo").append("<font color=red> future begining here...</font>");
+
+//});
+
+// 3. creat element using jQuery
+// $("#append").click(function(){
+// let li = $("<li></li>").text("jQuery");
+// $("ol").append(li);
+// });
+
+// 4. create eliment using dom
+// $("#append").click(function (){
+//     let li = document.createElement("li").innerHTML="jQuery";
+//     $("ol").append(li);
+//  });
+
+                                                  // ==> prepend
+
+// 1.text
+// $("#prepend").click(function(){
+//     $(".demo").prepend("hello Word");
+// });
+
+// 2. html
+
+// $("#prepend").click(function(){
+//     $("ol").prepend("<li>" + $("#data").val() + "</li>"); 
+// });
+
+// 3. after()
+
+// 1.text
+// $("#after").click(function(){
+//     $(".demo").after("mahadev")
+// });
+
+// 2.html
+// $("#after").click(function(){
+//     $(".demo").after("<h1>hello world</h1>");
+// });
+
+
+// 4.before()
+
+// 1.text
+// $("#before").click(function(){
+//     $(".demo").before("mahadev")
+// });
+
+// 2.html
+// $("#before").click(function(){
+//     $(".demo").before("<h1>hello world</h1>");
+// });
+
+// ** ==> jQuery remove element
+
+// 1. remove
+
+// $("#remove"). click(function(){
+//     // $("ol").remove();
+//     $("div").remove(".demo");
+//     $("div.demo").remove();
+// });
+
+// 2. Empty
+
+// $("#empty"). click(function(){
+//     // $("ol").empty();
+//     // $("div").empty(".demo");
+//     $("div.demo").empty();
+// });
+
+
+</script>
+
+
+
+</body>
+</html>

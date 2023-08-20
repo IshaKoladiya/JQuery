@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery_Ancestors_Decendant</title>
+        <style>
+                                    /* jQuery_Ancestors [purvajoo] */
+
+        body{
+            border: 2px solid black ;
+            padding: 10px;
+            margin: 10px;
+        }
+        .ancestors *{
+            border: 2px solid black ;
+            display: block;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* jQuery Decendants [ vansajo ] */
+
+        .decendant, .decendant *{
+            border: 2px solid black ;
+            display: block;
+            padding: 10px;
+            margin: 10px;
+        }
+
+
+
+
+
+    </style>
+    </head>
+    <body>
+
+        <!-- jQuery_Ancestors [purvajoo]-->
+
+        <div class="ancestors"> div [grete grand parent]
+            <!-- 1 -->
+
+            <div>div [grend parent]
+                <p>p [parent]
+                    <span>span</span>
+                </p>
+            </div>
+
+            <!-- 2 -->
+
+            <div>div [grend parent]
+                <p>p [parent]
+                    <span>span</span>
+                </p>
+            </div>
+
+            <!-- 3 -->
+
+            <div>div [grend parent]
+                <p>p [parent]
+                    <span>span</span>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- jQuery Decendants [ vansajo ] -->
+
+        <!-- <div class="decendant"> div [grete grand parent] -->
+            <!-- 1 -->
+
+            <!-- <div>div [grend parent]
+                <p>p [parent]
+                    <span>span</span>
+                </p>
+            </div> -->
+
+            <!-- 2 -->
+<!-- 
+            <div>div [grend parent]
+                <p>p [parent]
+                    <span>span</span>
+                </p>
+            </div>
+
+        </div> -->
+
+        <script src="./jquery-3.7.0.js"></script>
+        <script>
+
+ $("document").ready(function(){
+
+                                          // jQuery_Ancestors [purvajoo]
+
+// parent
+// $("span").parent().css("border","2px solid red");
+
+// parents
+// $("span").parents().css("border","2px solid red");
+// $("span").parents("div").css("border","2px solid red");
+
+// parentuntil
+// $("span").parentsUntil("div").css("border","2px solid red");
+
+                                        // jQuery Decendants [ vansajo ]
+
+                            // all specific children
+                            
+// $(".decendant").children(":first-child").css("border","3px solid red")     
+// $(".decendant").children(":last-child").css("border","3px solid red")     
+// $(".decendant").children(":nth-child(2)").css("border","3px solid red")     
+// $("p").children().css("border","3px solid red")     
+
+                             // find
+                             // all children and subchild
+
+// $(".decendant").find("*").css("border","2px solid red")
+// $(".decendant").find("p").css("border","2px solid red")
+
+
+ 
+ });                                       
+
+
+
+
+
+
+</script>
+    </body>
+</html>

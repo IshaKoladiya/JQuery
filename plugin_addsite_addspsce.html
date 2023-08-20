@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>plugin_addsite_addSpace </title>
+    </head>
+
+    <style>
+    body{
+        padding: 50px;
+    }
+button{
+    padding: 10px 30px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px grey;
+}
+#addsite{
+    background-color: lightcoral;
+    color: white;
+    border: 2px solid currentColor;
+    
+}
+
+#addsite:hover{
+    background-color: white;
+    color: lightcoral;
+    border: 2px solid currentColor;
+}
+#addspace{
+    background-color: lightgreen;
+    color: white;
+    border: 2px solid currentColor;
+}
+#addspace:hover{
+    background-color: white;
+    color: lightgreen;
+    border: 2px solid currentColor;
+}
+
+#border{
+    border: 3px solid black;
+    height: 500px;
+}
+
+.box{
+       
+        background-color: green;
+        margin: 8px;
+        border: 2px solid black;
+        display: inline-block;
+        color: white;
+        padding: 10px 20px;
+    }
+
+.bl{
+    
+    border: 2px solid red;
+    padding: 10px 5px;
+    margin: 2px;
+    display: inline-block;
+}
+
+#rw{
+    list-style-type: none;
+}
+
+</style>
+
+    <body>
+
+        <div>
+            <button id="addsite" type="button">Add_Site</button>
+            <button id="addspace" type="button">Add_Space</button>
+            <button id="btnrow" type="button">Button_Row</button>
+        </div>
+
+        <div id="border">
+            <ul id="rw">
+                <li></li>
+            </ul>
+        </div>
+
+        <script src="./jquery-3.7.0.js"></script>
+
+        <script>
+
+$(document).ready(function(){
+
+    let seat = '<span class="box"></span>';
+    let gall = '<span class="bl"></span>';
+
+    let row = ['A - ','B - ','C - ','D - ','E - ','F - ','G - ','H - ','I - ','J - ','K - ','L - ','M - ','N - ','O - ','P - ','Q - ','S - ','T - ','U - ','V - ','W - '];
+
+    let row_index = 0;  
+    let col_index = 0;  
+
+
+
+
+    // add site
+$("#addsite").on("click", function(){
+
+    col_index++;
+    $("#rw li").last().append(seat);
+    $("#rw li span").last().append(seat).text(row[row_index]+col_index).attr("data-row","row[row_index]").attr("data-col","row[col_index]");
+    
+});
+
+    // add blank site
+$("#addspace").on("click", function(){
+$("#rw li").last().append(gall);
+
+});
+
+// new row
+$("#btnrow").on ("click",function(){
+    row_index++;
+    col_index = 0;
+    $("#rw").append("<li></li>");
+})
+
+
+
+});
+</script>
+
+    </body>
+</html>

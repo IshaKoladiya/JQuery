@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>event</title>
+    </head>
+    <body>
+
+        <button id="btn">event</button>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores ipsam deserunt culpa repudiandae quod praesentium mollitia necessitatibus quae nemo tenetur doloremque aliquam voluptate amet debitis hic beatae, et quisquam adipisci quos quaerat neque, harum eius! Dignissimos tenetur autem, distinctio deserunt natus quis nam optio ducimus assumenda maiores suscipit provident minima vel, dolor ipsa recusandae odio laboriosam! Ratione optio, eligendi esse fugit libero nesciunt ipsa. Amet exercitationem pariatur aliquam saepe placeat ut, ad maxime odio cumque sint accusamus consequuntur voluptatibus soluta deleniti. Rerum porro maiores consequuntur quo mollitia. Dolor, mollitia maxime eligendi dolorum culpa, nesciunt quas temporibus quisquam perspiciatis libero corporis.</p>
+
+            <hr/>
+            <button id="hide">hide event</button>
+            <button id="show">show event</button>
+            <button id="toggle">toggle event</button>
+
+            <hr/>
+
+            <button id="out">fadeout event</button>
+            <button id="in">fadeIn event</button>
+            <button id="fadetoggle">fadetoggle event</button>
+            <button id="fadeto">fadeto event</button>
+
+            <hr/>
+
+            <button id="s_up">slideUp event</button>
+            <button id="s_down">slideDown event</button>
+            <button id="s_toggle">slideToggle event</button>
+
+
+        <!-- js -->
+
+        <script src="./jquery-3.7.0.js"></script>
+
+        <script>
+
+$(document).ready(function(){
+
+// jQuery event
+
+
+                                             // simple 
+
+// method - 1
+
+// $("#btn").click(function(){
+//  $("p").hide();
+// });
+
+// method - 2
+
+// $("#btn").on("click",function(){
+// $("p").hide();
+
+// });
+
+                                                // multiple
+
+
+// method - 1
+
+// $("#btn").click(function(){
+//  $("p").hide();
+// });
+// $("#btn").dblclick(function(){
+//  $("p").show();
+// });
+
+// method - 2
+
+// $("#btn").on({
+//     click:function(){
+//         $("p").hide();
+//     },
+//     dblclick:function(){
+//         $("p").show();
+//     }
+// });
+
+// 1.hide()
+
+$("#hide").click(function(){
+    $("p").hide();
+    // $("p").hide(1000);
+    // $("p").hide("slow");
+    // $("p").hide("fast");
+});
+
+// 2.show()
+
+$("#show").click(function(){
+    $("p").show();
+    // $("p").show(1000);
+    // $("p").show("slow");
+    // $("p").show("fast");
+});
+
+// 3.toggle()
+
+$("#toggle").click(function(){
+    $("p").toggle();
+    // $("p").toggle(1000);
+    // $("p").toggle("slow");
+    // $("p").toggle("fast");
+});
+
+// 4.fadeout()
+
+$("#out").click(function(){
+    $("p").fadeOut();
+    // $("p").fadeOut(1000);
+    // $("p").fadeOut("slow");
+    // $("p").fadeOut("fast");
+});
+
+// 5.fadeIn()
+
+$("#in").click(function(){
+    $("p").fadeIn();
+    // $("p").fadeIn(1000);
+    // $("p").fadeIn("slow");
+    // $("p").fadeIn("fast");
+});
+
+// 5.fadetoggle()
+
+$("#fadetoggle").click(function(){
+    $("p").fadeToggle();
+    // $("p").fadeToggle(1000);
+    // $("p").fadeToggle("slow");
+    // $("p").fadeToggle("fast");
+});
+
+// 6.fadeto()
+
+$("#fadeto").click(function(){
+    $("p").fadeTo(1000,0.5);
+    // $("p").fadeTo("slow",0.2);
+    // $("p").fadeTo("fast",0.3);
+});
+$("#fadeto").dblclick(function(){
+    $("p").fadeTo(1000,1);
+    // $("p").fadeTo("slow",1);
+    // $("p").fadeTo("fast",1);
+});
+
+// 7. slideup()
+
+$("#s_up").click(function(){
+    $("p").slideUp();
+    // $("p").slideUp(1000);
+    // $("p").slideUp("slow");
+    // $("p").slideUp("fast");
+});
+
+// 8. slideDown()
+
+$("#s_down").click(function(){
+    $("p").slideDown();
+    // $("p").slideDown(1000);
+    // $("p").slideDown("slow");
+    // $("p").slideDown("fast");
+});
+
+// 9. slideToggle()
+
+$("#s_toggle").click(function(){
+    $("p").slideToggle();
+    // $("p").slideToggle(1000);
+    // $("p").slideToggle("slow");
+    // $("p").slideToggle("fast");
+});
+
+});
+
+</script>
+
+    </body>
+</html>

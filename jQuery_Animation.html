@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery_Animation</title>
+
+    <style>
+        .box{
+            margin-top: 20px;
+            margin-left: 20px;
+            background-color: lightsalmon;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+
+<button id="start">start Animation</button>
+<button id="stop">stop Animation</button>
+
+<div class="box"></div>
+
+
+
+
+
+
+
+<script src="./jquery-3.7.0.js"></script>
+
+<script>
+
+// Animation
+
+     //    1. animate();
+     //    2. stop();
+
+$(document).ready(function(){
+
+// ==> simple effect
+
+// $("#start").click(function(){
+//     $(".box").animate({marginLeft:"300px"},3000);
+// });
+
+// ==> multiple effect
+
+// $("#start").click(function(){
+//     $(".box").animate({
+//         marginLeft:"300px",
+//         width:"200px",
+//         heigth:"200px",
+//         opacity:0.5
+//     },3000);
+// });
+
+// ==> effect applied one by one
+
+// $("#start").click(function(){
+//     $(".box").animate({marginLeft:"200px"},1000);
+//     $(".box").animate({marginTop:"200px"},1000);
+//     $(".box").animate({marginLeft:"0px"},1000);
+//     $(".box").animate({marginTop:"0px"},1000);
+// });
+
+// ==> reletive value
+
+// $("#start").click(function(){
+//     $(".box").animate({marginLeft:"300px"},1000);
+//     $(".box").animate({marginLeft:"-=100px"},1000);
+// });
+
+
+// ==> 2. stop()
+
+// $("#stop").click(function(){
+//     $(".box").stop();
+// });
+
+// ==>  jQuery call back function
+
+// $("#start").click(function(){
+// $(".box").slideUp(1000,function(){
+//     alert("effect completed");
+// })
+// });
+
+// ==> apply one by one effect
+
+// $("#start").click(function(){
+// $(".box").slideUp(1000,function(){
+// $(".box").slideDown(1000,function(){
+//     alert("effect completed");
+// });
+
+// });
+// });
+
+// ==> jQuery chaining method
+
+//singleline
+
+// $("#start").click(function(){
+//     $(".box").slideUp(1000).slideDown(1000).fadeOut(1000).fadeIn(1000).animate({marginLeft:"200px"},1000,function(){
+//         alert("run all effect")
+//     });
+// });
+
+// multiline
+
+$("#start").click(function(){
+    $(".box")
+    .slideUp(1000)
+    .slideDown(1000)
+    .fadeOut(1000)
+    .fadeIn(1000)
+    .animate({marginLeft:"200px"},1000,function(){
+        alert("run all effect")
+    });
+});
+
+});
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

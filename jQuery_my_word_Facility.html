@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my Word Facility</title>
+
+      <link rel="stylesheet" href="./../bootstrap/css/bootstrap.min.css">
+
+      <style>
+     
+      </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center mt-5">My Word Facility</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label> Write Something Here,</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <textarea name="text" id="input" cols="140" rows="8" style="resize: none;" title="text" placeholder="Enter text"></textarea>
+               
+            </div>
+        </div>
+    
+    </div>
+
+   <hr/>
+
+   <h1 class="ms-5">Preview : </h1>
+
+   <p  class="ms-5" id="preview" style="height: 100px;"></p>
+
+   <hr/>
+
+   <button type="reset" id="btnclr" class="btn btn-primary ms-5">clear</button>
+   <button type="reset" id="btnReset" class="btn btn-primary ms-5">Reset</button>
+   <button type="reset" id="Upper" class="btn btn-primary ms-5">UpperCase</button>
+   <button type="reset" id="Lower" class="btn btn-primary ms-5">LowerCase</button>
+   <button type="reset" id="cap" class="btn btn-primary ms-5">Capitalize</button>
+
+   <div class="ms-5 mt-5">
+    <h3 class="mb-5">Formatting</h3>
+    <button type="reset" id="bold" class="btn btn-primary ">Bold</button>
+    <button type="reset" id="italic" class="btn btn-primary ms-5">Italic</button>
+    <button type="reset" id="under" class="btn btn-primary ms-5">UnderLine</button>
+   </div>
+  
+   <div class="ms-5 mt-5">
+    <h3 class="mb-5">Alignment</h3>
+    <button type="reset" id="left" class="btn btn-primary ">left</button>
+    <button type="reset" id="center" class="btn btn-primary ms-5">center</button>
+    <button type="reset" id="right" class="btn btn-primary ms-5">right</button>
+    <button type="reset" id="justify" class="btn btn-primary ms-5">Justify</button>
+   </div>
+
+   <div class="container ms-5 mt-5">
+    <div class="row">
+        <div class="col">
+            <h2>Font Size</h2>
+                <select style="width:150px ;"  class="p-2" name="font" id="list">
+                    <option value=""> Font size</option>
+                    <option value="10">10px</option>
+                    <option value="30">30px</option>
+                    <option value="50">50px</option>
+                    <option value="70">70px</option>
+                    <option value="90">90px</option>
+                    <option value="110">110px</option>
+                    <option value="130">130px</option>
+                </select>
+        </div>
+        <div class="col">
+            <h2>Font Family</h2>
+                <select style="width:150px ;" class="p-2" name="font" id="ff">
+                    <option value=""> Font Family</option>
+                    <option value="Ink Free">Ink free</option>
+                    <option value="MingLiU_HKSCS-ExtB">MingLiU_HKSCS-ExtB</option>
+                    <option value="Segoe Script">Segoe Script</option>
+                    <option value="Small Fonts">Small Fonts</option>
+                    <option value="Air Millhouse">Air Millhouse</option>
+                 
+                </select>
+        </div>
+
+        <div class="col">
+            <h2>Font Color</h2>
+            <input type="color" id="clr">
+        </div>
+    </div>
+    
+   </div>
+
+<script src="./jquery-3.7.0.js"></script>
+<script src="./../bootstrap/js/bootstrap.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+ // preview
+
+    $('#input').on("keyup",function(){
+            let val = $('#input').val();
+            $('#preview').text(val);
+        });
+
+ // clear
+
+    $('#btnclr').on('click', function(){
+            $("#input").val(" ");
+            $("#preview").text(" ");
+        });
+
+// btn Reset
+
+   $('#btnReset').on('click', function(){
+        $("#preview").removeAttr('style');
+           
+        });
+
+  // UpperCase
+
+ $("#Upper").on("click", function(){
+            let preview = $("#preview");
+
+            if(preview.css("text-transform","uppercase")){
+                preview.css("text-transform"," ");
+            }
+            else{
+                preview.css("text-transform","uppercase");
+            }
+        });
+
+ // LowerCase
+
+ $("#Lower").on("click", function(){
+            let preview = $("#preview");
+
+            if(preview.css("text-transform","LowerCase")){
+                preview.css("text-transform"," ");
+            }
+            else{
+                preview.css("text-transform","LowerCase");
+            }
+        });
+    
+// Capitalige
+
+$("#cap").on("click", function(){
+            let preview = $("#preview");
+
+            if(preview.css("text-transform","CapitaliZe")){
+                preview.css("text-transform"," ");
+            }
+            else{
+                preview.css("text-transform","CapitaliZe");
+            }
+});
+
+
+// bold
+
+$("#bold").on("click", function(){
+            let preview = $("#preview");
+
+            if(preview.css("fontWeight","Bold")){
+                preview.css("fontWeight"," ");
+            }
+            else{
+                preview.css("fontWeight","Bold");
+            }
+        });
+
+// Italic
+
+$("#italic").on("click", function(){
+            let preview = $("#preview");
+
+            if(preview.css("fontStyle","italic")){
+                preview.css("fontStyle"," ");
+            }
+            else{
+                preview.css("fontStyle","italic");
+            }
+        });
+
+
+// Under line
+
+$("#under").on("click", function(){
+            let preview = $("#preview");
+
+            if(preview.css("textDecoration","UnderLine")){
+                preview.css("textDecoration","normal");
+            }
+            else{
+                preview.css("textDecoration","UnderLine");
+            }
+        });
+
+
+// Left
+
+$("#left").on("click", function(){
+            let preview = $("#preview");
+
+            if(preview.css("textAlign","left")){
+                preview.css("textAlign"," ");
+            }
+            else{
+                preview.css("textAlign","left");
+            }
+        });
+
+        // Right
+
+        $("#right").on("click", function(){
+            let preview = $("#preview");
+
+            if(preview.css("textAlign","Right")){
+                preview.css("textAlign"," ");
+            }
+            else{
+                preview.css("textAlign","Right");
+            }
+        });
+
+         // center
+
+         $("#center").on("click", function(){
+            let preview = $("#preview");
+
+            if(preview.css("textAlign","center")){
+                preview.css("textAlign"," ");
+            }
+            else{
+                preview.css("textAlign","center");
+            }
+        });
+
+         // justyfiy
+
+        $("#justify").on("click", function(){
+            let preview = $("#preview");
+
+            if(preview.css("textAlign","Justify")){
+                preview.css("textAlign"," ");
+            }
+            else{
+                preview.css("textAlign","Justify");
+            }
+        });
+
+
+    // font size dropdown
+
+    $('#list').on("change",function(){
+    let preview = $('#preview');
+    var str = " ";
+    str += $(this).val() + "px";
+    $("#preview").css('font-size', str);
+    });
+
+  // font family
+
+  $("#ff").change(function () {
+    let preview = $('#preview');
+    var str = " ";
+    str += $(this).val() + " ";
+    $("#preview").css('font-family', str);
+  });     
+
+  // font color
+
+    $("#clr").change(function () {
+    let preview = $('#preview');
+    str = " ";
+    str += $(this).val() + " ";
+    $("#preview").css('color', str);
+    }); 
+
+
+
+});
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

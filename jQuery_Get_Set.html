@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery_Get_Set</title>
+</head>
+<body>
+    
+<!-- 1.get -->
+
+
+<button id="gettext">get text</button>
+<button id="gethtml">get html</button>
+<button id="getattr">get attr</button>
+<button id="getval">get val</button>
+
+<input type="text" id="in">
+
+<h1 class="demo" title="ishu">
+   <b> future bigine here...</b>
+</h1>
+
+
+<!-- 2. set -->
+
+
+<button id="settext">set text</button>
+<button id="sethtml">set html</button>
+<button id="setattr">set attr</button>
+<button id="setval">set val</button>
+
+<input type="text" id="in2">
+
+
+<script src="./jquery-3.7.0.js"></script>
+<script>
+
+                                                   // ==> Set
+
+
+// 1.  text()
+// $("#gettext").click(function(){
+//     let output = $(".demo").text();
+//     alert(output);
+// });
+
+// 2. html()
+// $("#gethtml").click(function(){
+//     let output = $(".demo").html();
+//     alert(output);
+// });
+
+
+// 3.attr()
+// $("#getattr").click(function(){
+//     let output = $(".demo").attr('title');
+//     alert(output)
+// });
+
+
+// 4.val()
+// $("#getval").click(function(){
+
+//     let output = $("#in").val();
+//                 or
+//     let output = $("input[type="text"]").val();
+
+//     alert(output);
+// });
+
+                                                        // ==> Set
+
+    // 1. text()
+    // $("#settext").click(function(){
+    //   $(".demo").text("ishu koladiya")
+    // });      
+    
+    // 2. html()
+    // $("#sethtml").click(function(){
+    //     $(".demo").html("<h1>ishu koladiya</h1>");
+    // });
+
+    // 3. attr()
+
+    // $("#setattr").click(function(){
+    //     $(".demo").attr("title","since 2023");
+    // });
+
+    // 4. val()
+
+    $("#setval").click(function(){
+     $("#in2").val("enter username");
+    });
+
+
+</script>
+
+
+</body>
+</html>

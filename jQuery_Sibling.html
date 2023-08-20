@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery_Sibling</title>
+</head>
+<style>
+    .sibling *{
+        display: block;
+        border: 2px solid black;
+        padding: 20px;
+        margin: 10px;
+    }
+</style>
+<body>
+    <div class="sibling">
+        <p>ishu</p> 
+        <h1 class="hello">hello world</h1>
+        <h1>hello world</h1>
+    <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, expedita.
+    </div>
+    <div class="demo">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, expedita.
+    </div>
+    <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, expedita.
+    </div>
+        <h1 class="hello">hello world</h1>
+        <h1>hello world</h1>
+
+     <p>ishu</p>   
+    </div>
+
+
+
+
+
+
+
+<script src="./jquery-3.7.0.js"></script>
+<script>
+
+$(document).ready(function(){
+
+// current element
+// $(".demo").css("border","2px solid red");
+
+// sibling
+// $(".demo").css("border","2px solid red").siblings().css("border","2px solid green")
+
+// next()
+// $(".demo").next().css("border","2px solid red");
+
+// nextAll()
+// $(".demo").nextAll().css("border","2px solid red");
+
+// nextUntil()
+// $(".demo").nextUntil("p").css("border","2px solid red");
+// $(".demo").nextUntil("h1").css("border","2px solid red");
+
+// prev()
+// $(".demo").prev().css("border","2px solid red");
+
+// prevAll()
+// $(".demo").prevAll().css("border","2px solid red");
+// $(".demo").prevAll("p").css("border","2px solid red");
+
+// prevuntil()
+// $(".demo").prevUntil("h1").css("border","2px solid red") 
+
+
+// jQuery filtering
+
+// all h1
+// $("h1").css("border","2px solid red");
+
+// first h1
+// $("h1").first().css("border","2px solid red");
+
+// last h1
+// $("h1").last().css("border","2px solid red");
+
+//  specific element
+// $("h1").eq(0).css("border","2px solid red");
+// $("h1").eq(1).css("border","2px solid red");
+// $("h1").eq(2).css("border","2px solid red");
+
+// filter
+// $("h1").css("border","2px solid red");
+// $("h1").filter(".hello").css("border","2px solid red");
+// $("h1.hello").css("border","2px solid red");
+
+// not()
+// $("h1").css("border","2px solid red")
+$("h1").not(".hello").css("border","2px solid red")
+
+
+
+
+
+
+
+
+
+
+
+
+});
+
+
+</script>
+
+</body>
+</html>
